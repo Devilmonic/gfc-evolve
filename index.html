@@ -7,71 +7,101 @@
 <meta name="description" content="GFC Evolve, South Africa. Digital downloads for Claude Code: a security reviewer skill with an MCP starter pack, and a session briefing hook. 14-day refund.">
 <style>
 :root{
-  --ink:#1f1a17; --paper:#f6efe3; --sand:#e8dcc6; --rust:#9c3d1c; --rust-d:#7a2e14;
-  --sage:#3f5a4a; --line:#cbb99a; --white:#fffdf8;
+  --ink:#14103a; --night:#1b1250; --violet:#6d28d9; --magenta:#be185d; --pink:#f472b6;
+  --orange:#f97316; --sun:#fbbf24; --teal:#0d9488; --mint:#5eead4; --sky:#0ea5e9;
+  --cream:#fff8ec; --lilac:#f1e8ff; --peach:#ffe8d6; --aqua:#dcfaf4; --white:#ffffff;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --serif:Georgia,"Iowan Old Style","Palatino Linotype",serif;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --rainbow:linear-gradient(90deg,#f97316,#fbbf24,#5eead4,#0ea5e9,#6d28d9,#f472b6);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.65 var(--sans)}
-a{color:var(--rust-d);text-underline-offset:3px}
-a:hover{color:var(--ink)}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px}
-.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.75rem 1rem;z-index:10}
+body{margin:0;background:var(--cream);color:var(--ink);font:1.0625rem/1.65 var(--sans)}
+a{color:var(--magenta);text-underline-offset:3px;font-weight:600}
+a:hover{color:var(--violet)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.75rem 1rem;z-index:10}
 .skip:focus{left:0}
 .wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
-header.top{border-bottom:2px solid var(--ink)}
-.bar{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center;justify-content:space-between;padding:1rem 0}
-.brand{font:700 1.25rem var(--mono);letter-spacing:.04em;text-decoration:none;color:var(--ink)}
-.brand span{color:var(--rust)}
-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}
-nav a{display:inline-block;padding:.6rem .25rem;min-height:44px;color:var(--ink);font-family:var(--mono);font-size:.9rem}
-.hero{padding:4rem 0 3.5rem;background:
-  linear-gradient(var(--paper) 0 0) padding-box;position:relative;border-bottom:2px solid var(--ink)}
-.hero .strata{height:14px;margin-bottom:2.5rem;background:
-  linear-gradient(90deg,var(--rust) 0 38%,var(--sage) 38% 62%,var(--sand) 62% 100%);border:2px solid var(--ink)}
-.kicker{font:600 .85rem var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--sage);margin:0 0 1rem}
-h1{font:700 clamp(2.2rem,6vw,4rem)/1.08 var(--serif);margin:0 0 1.25rem;max-width:18ch;letter-spacing:-.01em}
-.lead{font-size:1.25rem;max-width:40rem;margin:0 0 2rem}
-.btn{display:inline-block;background:var(--rust);color:#fff;padding:.85rem 1.5rem;min-height:48px;font:700 1rem var(--mono);text-decoration:none;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
-.btn:hover{background:var(--rust-d);color:#fff}
+header.top{background:var(--night);border-bottom:5px solid transparent;border-image:var(--rainbow) 1;position:sticky;top:0;z-index:5}
+.bar{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center;justify-content:space-between;padding:.75rem 0}
+.brand{font:800 1.3rem var(--mono);letter-spacing:.05em;text-decoration:none;color:#fff}
+.brand span{color:var(--sun)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1rem}
+nav a{display:inline-block;padding:.6rem .6rem;min-height:44px;color:#fff;font:600 .9rem var(--mono);text-decoration:none;border-radius:999px}
+nav a:hover{background:var(--magenta);color:#fff}
+.hero{padding:4.5rem 0 4rem;color:#fff;position:relative;overflow:hidden;
+  background:
+   radial-gradient(circle at 12% 18%,rgba(249,115,22,.55),transparent 38%),
+   radial-gradient(circle at 88% 12%,rgba(14,165,233,.5),transparent 40%),
+   radial-gradient(circle at 70% 95%,rgba(244,114,182,.55),transparent 42%),
+   linear-gradient(135deg,#2a1070,#6d28d9 55%,#be185d)}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:var(--sun);opacity:.9;mix-blend-mode:screen}
+.hero .wrap{position:relative;z-index:1}
+.strata{height:16px;margin-bottom:2.25rem;border-radius:999px;background:var(--rainbow)}
+.kicker{display:inline-block;font:700 .85rem var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--ink);background:var(--sun);padding:.35rem .8rem;border-radius:999px;margin:0 0 1.25rem}
+h1{font:800 clamp(2.4rem,6.5vw,4.4rem)/1.05 var(--serif);margin:0 0 1.25rem;max-width:16ch;letter-spacing:-.01em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--sun),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.25rem;max-width:40rem;margin:0 0 2rem;color:#fff}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--violet),var(--magenta));color:#fff;padding:.85rem 1.6rem;min-height:48px;font:800 1rem var(--mono);text-decoration:none;border:3px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 var(--ink);transition:transform .12s}
+.btn:hover{color:#fff;transform:translate(-1px,-1px)}
 .btn:active{box-shadow:1px 1px 0 var(--ink);transform:translate(3px,3px)}
-.btn.btn-disabled{background:var(--sand);color:#4a4038;border-color:#8a7c68;box-shadow:none;cursor:not-allowed}
-.btn.ghost{background:transparent;color:var(--ink);margin-left:.5rem}
-.btn.ghost:hover{background:var(--sand);color:var(--ink)}
-.note{font:.85rem var(--mono);margin-top:1.25rem;color:#4a4038}
-section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
-h2{font:700 clamp(1.6rem,4vw,2.25rem)/1.15 var(--serif);margin:0 0 1.5rem}
-h2::before{content:"// ";font-family:var(--mono);color:var(--rust)}
+.hero .btn{background:linear-gradient(135deg,var(--orange),var(--sun));color:var(--ink)}
+.hero .btn:hover{color:var(--ink)}
+.btn.btn-disabled{background:#e5e1f5;color:#4a4470;border-color:#8a84b0;box-shadow:none;cursor:not-allowed}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff;box-shadow:none;margin-left:.5rem}
+.btn.ghost:hover{background:#fff;color:var(--violet)}
+.note{font:.85rem var(--mono);margin-top:1.25rem;color:#e9defc}
+section .note{color:#4a4470}
+section{padding:3.5rem 0}
+#products{background:var(--lilac)}
+#included{background:var(--peach)}
+#faq{background:var(--aqua)}
+#refunds{background:var(--sun);}
+#contact{background:var(--cream)}
+#terms{background:var(--lilac)}
+#privacy{background:var(--peach)}
+h2{font:800 clamp(1.7rem,4vw,2.4rem)/1.15 var(--serif);margin:0 0 1.5rem}
+h2::before{content:"// ";font-family:var(--mono);color:var(--magenta)}
+#refunds h2::before{color:var(--ink)}
+#refunds a{color:var(--ink)}
 h3{font:700 1.3rem/1.25 var(--serif);margin:0 0 .5rem}
-.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr))}
-.card{background:var(--white);border:2px solid var(--ink);padding:1.5rem;display:flex;flex-direction:column;box-shadow:6px 6px 0 var(--sand)}
-.tag{font:600 .75rem var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--sage);margin:0 0 .75rem}
-.price{font:700 1.75rem var(--mono);margin:.5rem 0 1rem}
-.price small{font-size:.9rem;font-weight:400}
+.grid{display:grid;gap:1.75rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr))}
+.card{background:var(--white);border:3px solid var(--ink);border-radius:16px;overflow:hidden;padding:0 1.5rem 1.5rem;display:flex;flex-direction:column;box-shadow:7px 7px 0 var(--violet)}
+.card::before{content:"";display:block;height:14px;margin:0 -1.5rem 1.25rem;background:var(--rainbow)}
+.card:nth-child(2){box-shadow:7px 7px 0 var(--orange)}
+.tag{display:inline-block;align-self:flex-start;font:700 .75rem var(--mono);text-transform:uppercase;letter-spacing:.1em;color:#fff;background:var(--teal);padding:.25rem .65rem;border-radius:999px;margin:0 0 .75rem}
+.card:nth-child(2) .tag{background:var(--magenta)}
+.price{font:800 1.9rem var(--mono);margin:.5rem 0 1rem;color:var(--violet)}
+.price small{font-size:.9rem;font-weight:400;color:var(--ink)}
 .card ul{padding-left:1.1rem;margin:0 0 1.25rem}
+.card li::marker{color:var(--magenta)}
 .card .btn{margin-top:auto;align-self:flex-start}
-.todo{background:#ffe9a8;padding:0 .3em;font-family:var(--mono);font-size:.92em;border:1px dashed var(--ink)}
-.list{list-style:none;padding:0;margin:0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
-.list li{border-left:4px solid var(--rust);padding:.25rem 0 .25rem 1rem}
-.list strong{display:block;font-family:var(--serif);font-size:1.1rem}
-details{border:2px solid var(--ink);background:var(--white);margin-bottom:.75rem}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+.list li{background:#fff;border:3px solid var(--ink);border-radius:14px;padding:1rem 1.1rem;border-top-width:10px}
+.list li:nth-child(1){border-top-color:var(--violet)}
+.list li:nth-child(2){border-top-color:var(--orange)}
+.list li:nth-child(3){border-top-color:var(--teal)}
+.list li:nth-child(4){border-top-color:var(--magenta)}
+.list strong{display:block;font-family:var(--serif);font-size:1.15rem;margin-bottom:.15rem}
+details{border:3px solid var(--ink);border-radius:12px;background:#fff;margin-bottom:.75rem;overflow:hidden}
+details:nth-of-type(odd){border-left:12px solid var(--teal)}
+details:nth-of-type(even){border-left:12px solid var(--violet)}
 summary{cursor:pointer;padding:.9rem 1rem;min-height:48px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:1rem}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--mono);color:var(--rust)}
+summary::after{content:"+";font:800 1.2rem var(--mono);color:var(--magenta)}
 details[open] summary::after{content:"\2212"}
-details p{margin:0;padding:0 1rem 1rem}
+details[open] summary{background:var(--lilac)}
+details p{margin:0;padding:.75rem 1rem 1rem}
 .legal{max-width:44rem}
-.legal h3{margin-top:1.5rem}
-footer{background:var(--ink);color:var(--paper);padding:2.5rem 0}
-footer a{color:var(--sand)}
-footer a:hover{color:#fff}
+.legal h3{margin-top:1.5rem;color:var(--violet)}
+footer{background:var(--night);color:#fff;padding:2.5rem 0;border-top:6px solid transparent;border-image:var(--rainbow) 1}
+footer a{color:var(--sun)}
+footer a:hover{color:var(--mint)}
 .foot{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
-footer .todo{color:var(--ink)}
-@media (max-width:30rem){.btn.ghost{margin:.75rem 0 0}.btn{width:100%;text-align:center}.card .btn{align-self:stretch}}
+@media (max-width:30rem){.btn.ghost{margin:.75rem 0 0}.btn{width:100%;text-align:center}.card .btn{align-self:stretch}.hero::after{width:140px;height:140px}}
 </style>
 </head>
 <body>
@@ -97,7 +127,7 @@ footer .todo{color:var(--ink)}
     <div class="wrap">
       <div class="strata" aria-hidden="true"></div>
       <p class="kicker">Digital downloads from South Africa</p>
-      <h1>Ready-made skills for Claude Code.</h1>
+      <h1>Ready-made skills for <em>Claude Code.</em></h1>
       <p class="lead">GFC Evolve sells software you download and run yourself: Claude Code skills and MCP starter packs. Buy once, unzip, drop into your project.</p>
       <a class="btn" href="#products">See the downloads</a>
       <a class="btn ghost" href="#included">What is in the zip</a>
